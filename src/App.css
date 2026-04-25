@@ -1,0 +1,23 @@
+/*fuente */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap');
+
+.App{
+  background-color: #121212;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+.main {
+  max-width: 675px;
+  margin: 0 auto;
+}
+.contenido-principal{
+  display: grid;
+  place-items: center;
+  gap: 90px;
+  padding: 60px 20px;
+
+}
+.abogadas-container {
+  display: flex;
+  justify-content: flex-start;
+}
