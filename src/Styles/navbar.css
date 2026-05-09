@@ -1,7 +1,38 @@
 .navbar-custom {
-  background-color: rgba(31, 31, 31, 0.9);
-  backdrop-filter: blur(100px);
+  position: relative;
+  top: 0;
+
+  z-index: 1000;
+
+  padding: 20px 0;
+
+  background-color: transparent;
+
+  transition:
+    background-color 0.4s ease,
+    padding 0.4s ease,
+    box-shadow 0.4s ease,
+    backdrop-filter 0.4s ease
 }
+
+.navbar-custom.scrolled {
+  position: fixed;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 90%;
+  border-radius: 20px;
+
+  background-color: rgba(31, 31, 31, 0.85);
+  backdrop-filter: blur(15px);
+
+  padding: 10px 0;
+
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+
 .navbar-custom .nav-link {
   font-family: 'Poppins', sans-serif;
   position: relative;
@@ -26,7 +57,6 @@
 }
 
 
-
 .navbar-custom .nav-link:hover::after {
   width: 100%;
 }
@@ -46,7 +76,7 @@
   color: #c9a44c;
 }
 
- 
+
 
 
 

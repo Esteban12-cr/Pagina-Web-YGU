@@ -1,9 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../Styles/navbar.css';
 
-export default function navbar() {
+export default function Navbar() {
+
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-custom">
+    <nav className={`navbar navbar-expand-lg navbar-custom ${scrolled ? 'scrolled' : ''}`}>
       <div className="container">
 
         <a className="navbar-brand" href="#">
@@ -17,25 +32,42 @@ export default function navbar() {
           data-bs-target="#navbarText"
         >
           <span className="navbar-toggler-icon"></span>
-        </button> 
+        </button>
 
         <div className="collapse navbar-collapse" id="navbarText">
           <ul className="navbar-nav ms-auto">
 
             <li className="nav-item">
-              <a className="nav-link" href="#">Inicio</a>
+              <a
+                className="nav-link"
+                href="#inicio"
+              >
+                Inicio
+              </a>
             </li>
 
             <li className="nav-item">
-              <a className="nav-link" href="#">Servicios</a>
+              <a className="nav-link" href="#servicios">
+                Servicios
+              </a>
             </li>
 
             <li className="nav-item">
-              <a className="nav-link" href="#">Abogadas</a>
+              <a
+                className="nav-link"
+                href="#abogada"
+              >
+                Abogada
+              </a>
             </li>
 
             <li className="nav-item">
-              <a className="nav-link contacto-btn" href="#">Contacto</a>
+              <a
+                className="nav-link contacto-btn"
+                href="#footer"
+              >
+                Contacto
+              </a>
             </li>
 
           </ul>

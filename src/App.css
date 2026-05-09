@@ -14,10 +14,18 @@
   display: grid;
   place-items: center;
   gap: 90px;
-  padding: 60px 20px;
-
+  padding: 140px 20px 60px;
 }
+
 .abogadas-container {
   display: flex;
   justify-content: flex-start;
+}
+
+.html {
+  scroll-behavior: smooth;
+}
+.body {
+  margin: 0;
+  overflow-x: hidden;
 }
