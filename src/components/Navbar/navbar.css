@@ -1,0 +1,158 @@
+.navbar-custom {
+  position: relative;
+  top: 0;
+
+  z-index: 1000;
+
+  padding: 20px 0;
+
+  background-color: transparent;
+
+  transition:
+    background-color 0.4s ease,
+    padding 0.4s ease,
+    box-shadow 0.4s ease,
+    backdrop-filter 0.4s ease
+}
+
+.navbar-custom.scrolled {
+  position: fixed;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 90%;
+  border-radius: 20px;
+
+  background-color: rgba(31, 31, 31, 0.85);
+  backdrop-filter: blur(15px);
+
+  padding: 10px 0;
+
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.navbar-custom .nav-link {
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  color: #bfbfbf;
+  margin-left: 20px;
+  transition: color 0.3s ease;
+}
+
+.navbar-custom .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #c9a44c;
+  transition: width 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #c9a44c;
+}
+
+
+.navbar-custom .nav-link:hover::after {
+  width: 100%;
+}
+
+
+.navbar-custom .navbar-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #c9a44c;
+  transition: all 0.3s ease;
+
+}
+
+.navbar-custom .navbar-brand span {
+  color: #c9a44c;
+}
+
+
+
+
+
+
+.contacto-btn {
+  border: 1px solid #c9a44c;
+  padding: 5px 12px;
+  border-radius: 5px;
+  color: #c9a44c !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contacto-btn:hover {
+  background-color: #ffffff;
+  color: #1c1c1c !important;
+}
+
+.navbar-custom .navbar-brand:hover {
+  transform: scale(1.05);
+}
+
+
+/* =========================
+   RESPONSIVE MOBILE
+========================= */
+
+@media (max-width: 991px) {
+
+  .navbar-custom {
+    padding: 15px 20px;
+  }
+
+  .navbar-custom.scrolled {
+    width: 95%;
+    top: 10px;
+    border-radius: 15px;
+    padding: 12px 15px;
+  }
+
+  .navbar-custom .navbar-collapse {
+    margin-top: 15px;
+    background-color: rgba(31, 31, 31, 0.95);
+    border-radius: 15px;
+    padding: 20px;
+  }
+
+  .navbar-custom .navbar-nav {
+    gap: 10px;
+  }
+
+  .navbar-custom .nav-link {
+    margin-left: 0;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .contacto-btn {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  /* BOTON HAMBURGUESA */
+
+  .navbar-toggler {
+    border: none;
+    box-shadow: none !important;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+
+  .navbar-toggler-icon {
+    filter: invert(1);
+  }
+
+}

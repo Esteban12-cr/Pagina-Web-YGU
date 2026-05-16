@@ -1,11 +1,11 @@
 import './App.css';
-import Navbar from './components/navbar';
-import Footer from './components/footer';
-import Abogada from './components/abogada';
+import Navbar from './components/Navbar/navbar';
+import Footer from './components/Footer/footer';
+import Abogada from './components/Abogada/abogada';
 import yuli from './assets/yuli.jpg';
-import Texto from './components/mainText';
-
-
+import Texto from './components/Maintext/mainText';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 function App() {
   return (

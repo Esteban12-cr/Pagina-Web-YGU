@@ -1,0 +1,87 @@
+/* CONTENEDOR GENERAL */
+
+.texto-container {
+  color: #e0e0e0;
+
+  width: 100%;
+  max-width: 1000px;
+
+  min-height: 300px;
+
+  margin: 40px auto;
+  padding: 50px;
+
+  text-align: center;
+
+  background-color: #1c1c1c;
+
+  border-radius: 12px;
+}
+
+/* TITULO */
+
+.texto-container h1 {
+  font-family: 'Playfair Display', serif;
+  color: #ffffff;
+
+  margin-bottom: 20px;
+
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+/* PARRAFO */
+
+.texto-container p {
+  color: #bfbfbf;
+  line-height: 1.8;
+
+  font-size: 16px;
+}
+
+/* LINEA DORADA */
+
+.texto-container::after {
+  content: "";
+
+  display: block;
+
+  width: 100%;
+  max-width: 800px;
+
+  height: 3px;
+
+  margin: 30px auto 0;
+
+  background: linear-gradient(
+    to right,
+    transparent,
+    #c9a44c,
+    transparent
+  );
+}
+
+/* =========================
+   RESPONSIVE MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .texto-container {
+
+    padding: 30px 20px;
+
+    margin: 20px 15px;
+
+    min-height: auto;
+  }
+
+  .texto-container h1 {
+    font-size: 32px;
+  }
+
+  .texto-container p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+}
